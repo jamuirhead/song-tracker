@@ -12,8 +12,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use(morgan('combined'));
 
-app.get('/status', (req, res) => {
-  res.send({ message: 'Server is running!' });
+app.post('/register', (req, res) => {
+  res.send({ message: 'Registered!' });
 });
 
 const PORT = process.env.PORT || 8081;
